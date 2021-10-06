@@ -1,9 +1,3 @@
-<style>
-    a:link, a:visited, a:active {
-    text-decoration: none;
-    }
-</style>
-
 # Práctica 1: IAAS
 #### Jaime Simeón Palomar Blumenthal
 ##### alu0101228587@ull.edu.es
