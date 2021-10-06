@@ -86,3 +86,103 @@ A la hora de utilizar **Git**, va a haber comandos con varias opciones que tenga
 `git config --global alias.amend 'commit --amend'`
 
 En este caso estamos creando el **alias** _git amend_ para utilizar el comando `git commit --amend`, que sobreescribe el último commit hecho por el usuario.
+
+<a name="nvm"><a>
+## 6. Instalación de NVM, Node y extensiones.
+
+Para instalar el **gestor de versiones de Node** (NVM) ejecutamos el siguiente comando y **reiniciamos la Terminal**:
+
+`wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
+
+Una vez esté instalado, podemos utilizarlo para **instalar la última versión de Node** ejecutando `nvm install --lts`
+
+![Versión instalada de Node](./img/fig13.png)
+
+Seguidamente, ejecutaremos `npm install -g jshint` para instalar **JSHint**, una aplicación para **detectar errores** en el funcionamiento de **código JavaScript**.
+
+Por otro lado, **ExpressJS** es una extensión de Node para trabajar sobre JavaScript. Para instalarlo, previamente debemos haber **instalado y configurado NVM y Node**. Ejecutamos `npm install express-generator -g` en la Terminal.
+
+<a name="rvm"><a>
+## 7. Instalación de RVM y Ruby
+
+RVM es el **gestor de versiones de Ruby**. Para instalarlo primero debemos tener a punto software-properties-common, por lo que ejecutamos lo siguiente en la **consola**:
+
+`sudo apt-get install software-properties-common`
+
+Seguimos con la descarga del **paquete de instalación de RVM**:
+
+```shell
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install rvm
+```
+
+Y **cambiamos de usuario** de RVM al nuestro:
+
+`sudo usermod -a -G rvm $USER`
+
+_$USER_ almacena el **nombre del usuario actual**. Si quisiéramos añadir a otro usuario, cambiamos esta variable por el nombre de usuario correspondiente.
+
+**Reiniciamos** el equipo o máquina virtual para aplicar todos los cambios y habilitamos los paquetes de gemas e instalamos Ruby:
+
+```shell
+rvm user gemsets
+rvm install ruby
+```
+
+Podemos ejecutar `ruby -v` para comprobar que todo ha sido instalado correctamente.
+
+![Comprobación versión Ruby](./img/fig17.png)
+
+<a name="nerdtree"><a>
+## 8. Instalación y uso de NERDTree
+
+**NERDTree** es un **gestor de archivos** para Vim, que permite movernos visualmente en jerarquías de archivos complejas. Para instalarlo, si disponemos de **VIM 8.0 o superior**, simplemente ejecutamos las siguientes instrucciones en la Terminal. Para conocer **nuestra versión de Vim** ejecutamos `vim --version`.
+
+```shell
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+```
+
+Las otras **opciones de instalación** consisten en [utilizar un gestor de extensiones de Vim externo][tutorial_gestor_externo], y no el nativo de las últimas versiones.
+
+![Interfaz de NERDTree](./img/fig18.png)
+
+Para abrir **NERDTree**, primero **abrimos un archivo** con Vim, y ejecutamos `:NERDTree`. Estos son algunos de las posibles acciones:
+
+* _t_: Abrir el archivo seleccionado en una nueva pestaña.
+* _m_: Muestra el menú de NERDTree.
+* _?_: Muestra la guía rápida de NERDTree.
+
+Para acceder a la **documentación** de NERDTree ejecutamos `:help NERDTree` en Vim.
+
+[tutorial_gestor_externo]: https://github.com/preservim/nerdtree
+
+<a name="webapp"><a>
+## Puesta en marcha de una aplicación web
+
+Una vez configurada y ejecutada, la **aplicación de ejemplo** que se propone en la práctica queda de esta forma en la Terminal:
+
+![Salida por consola de la app](./img/fig19.png)
+
+Y de esta otra accediendo a **nuestra máquina a través del puerto 80**:
+
+![Captura de la app en navegador](./img/fig20.png)
+
+### Cómo poner una aplicación en marcha
+
+1. Crea el directorio del proyecto o el proyecto en sí.
+   * `mkdir (nombre-proyecto)` ó `express (nombre-proyecto)`
+
+2. Instala las dependencias.
+   * `npm install`
+
+3. Codifica la aplicación en un fichero JavaScript.
+
+4. Ejecuta el fichero con Node.
+   * `node (nombre_fichero).js`
+
+5. Accede a la URL local indicada por Node.
+
+6. ¡Éxito!
+
