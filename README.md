@@ -22,3 +22,18 @@ En esta práctica se pretende instalar **todos los programas y extensiones** nec
 
 <a name="homebrew"><a>
 ## **Instalación de Homebrew for Linux**
+
+Seguimos los pasos indicados en la [**página principal de Homebrew**][homebrew_web], es decir, ejecutamos la siguiente instrucción:
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+Es posible que tengamos que instalar **curl** ejecutando `sudo apt install curl` en la terminal.
+
+[homebrew_web]: https://brew.sh/index_es
+
+<a name="git"><a>
+## **Instalación de Git**
+
+Para realizar la instalación del sistema de control de versiones emplearemos el gestor de paquetes nativo de Unix: **APT**. En la terminal ejecutaremos `sudo apt install git`:
+<p>
+![Captura instalación git](./img/fig4.png)
