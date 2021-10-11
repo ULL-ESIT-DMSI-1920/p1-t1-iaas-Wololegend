@@ -159,7 +159,7 @@ Para acceder a la **documentación** de NERDTree ejecutamos `:help NERDTree` en 
 [tutorial_gestor_externo]: https://github.com/preservim/nerdtree
 
 <a name="webapp"><a>
-## Puesta en marcha de una aplicación web
+## 9. Puesta en marcha de una aplicación web
 
 Una vez configurada y ejecutada, la **aplicación de ejemplo** que se propone en la práctica queda de esta forma en la Terminal:
 
