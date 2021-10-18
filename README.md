@@ -48,8 +48,6 @@ También deberemos seguir la [**documentación ofrecida en Github**][github_doc]
 
 Además, también tendremos que [**generar una clave SSH y verificarla en Github**][ssh_key].
 
-![Generación de clave SSH](./img/fig8.png)
-
 En Github podremos agregarla desde _Configuración > Claves SSH y GPG_.
 
 ![Agregar clave SSH a Github](./img/fig9.png)
